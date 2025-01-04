@@ -1,0 +1,42 @@
+{
+  "originHash" : "07068e12b18c09fb80d665cd7056ed2b9f8fc6c3b55e0a5879282c01c394212d",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "e16d3481f5ed35f0472cb93350085853d754913f",
+        "version" : "5.10.1"
+      }
+    },
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess.git",
+      "state" : {
+        "revision" : "8d33ffd6f74b3bcfc99af759d4204c6395a3f918",
+        "version" : "3.2.1"
+      }
+    },
+    {
+      "identity" : "swiftystorekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bizz84/SwiftyStoreKit.git",
+      "state" : {
+        "revision" : "9ce911639680113dac9b554d6243e406a9758ebe",
+        "version" : "0.16.4"
+      }
+    },
+    {
+      "identity" : "useracquisition",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/inapps-io/UserAcquisition.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "15730c614eeb35d801d64bc44ddad01d32d61117"
+      }
+    }
+  ],
+  "version" : 3
+}

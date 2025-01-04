@@ -1,0 +1,12 @@
+{
+    "Simulator Target Bundle": "bundle",
+    "aps": {
+        "alert": {
+            "title": "title",
+            "body": "subtitle"
+        }
+    },
+    "balance": 320,
+    "change":600,
+    "event":"ACTIVATION_REFUND"
+}

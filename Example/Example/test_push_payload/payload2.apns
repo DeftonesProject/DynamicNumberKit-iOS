@@ -1,0 +1,17 @@
+{
+  "activation_id": 77341,
+  "Simulator Target Bundle": "bundle",
+  "aps": {
+    "alert": {
+      "body": "Your Any Other code is: Your Identitytheft.gov verification code is 316946",
+      "title": "Code Received"
+    },
+    "mutable-content": 1,
+    "sound": "Default"
+  },
+  "code": "316948",
+  "event": "ACTIVATION_CODE",
+  "number": "+18253639301",
+  "text": "Your Identitytheft.gov verification code is 316948"
+}
+
