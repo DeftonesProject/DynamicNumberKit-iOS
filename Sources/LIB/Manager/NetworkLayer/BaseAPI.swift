@@ -24,9 +24,7 @@ public class BaseAPI<T: TargetType> {
                 parameters: parameters.0,
                 encoding: parameters.1,
                 headers: headers
-             ).response { response in
-                 print( "MY LOG: ...." + String(data: response.data!, encoding: .utf8)!)
-             }
+             )
             return try await response.serializingDecodable(M.self).value
         } catch let error as AFError {
             if error.isSessionTaskError || (error.underlyingError as NSError?)?.code == NSURLErrorTimedOut {
