@@ -17,6 +17,7 @@ public class BaseAPI<T: TargetType> {
         let headers = Alamofire.HTTPHeaders(target.headers ?? [:])
         let parameters = buildParams(task: target.task)
 
+        print("SEND REQUEST \(target.path) time = \(Date())")
         do {
              let response = AF.request(
                 target.baseURL + target.path,
@@ -25,6 +26,7 @@ public class BaseAPI<T: TargetType> {
                 encoding: parameters.1,
                 headers: headers
              )
+            print("GET RESPONSE \(target.path) time = \(Date())")
             return try await response.serializingDecodable(M.self).value
         } catch let error as AFError {
             if error.isSessionTaskError || (error.underlyingError as NSError?)?.code == NSURLErrorTimedOut {

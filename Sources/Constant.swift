@@ -14,10 +14,10 @@ public enum Constant {
     static var baseURL: String = ""
     
     struct Key {
-        static let keychainName = "\(bundle).keychain.key.V1"
-        static let userToken = "\(bundle).keychain.user.token.key.V1"
-        static let userID = "\(bundle).keychain.user.id.key.V1"
-        static let deviceId = "\(bundle).keychain.device.id.key.V1"
+        static let keychainName = "\(bundle).keychain.key.V5"
+        static let userToken = "\(bundle).keychain.user.token.key.V5"
+        static let userID = "\(bundle).keychain.user.id.key.V5"
+        static let deviceId = "\(bundle).keychain.device.id.key.V5"
     }
     
     static var deviceId: String {

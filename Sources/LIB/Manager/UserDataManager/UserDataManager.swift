@@ -44,7 +44,7 @@ public class UserDataManager {
     public static func deleteAccountData() {
         UserDataManager.userID = nil
         UserDataManager.userToken = nil
-        CreditManager.shared.updateCredit(newAmount: 0)
+        CreditManager.shared.updateCredit(newAmount:Credit( amount: 0, frozen: 0))
     }
 }
 
