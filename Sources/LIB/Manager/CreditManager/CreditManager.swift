@@ -20,7 +20,7 @@ public class CreditManager: ObservableObject {
     public func fetchCreditFromServer() {
         _Concurrency.Task {
             do {
-                let result = try await GetSMS.shared.nw.getBalance()
+                let result = try await DynamicNumberKit.shared.nw.getBalance()
                 DispatchQueue.main.async {
                     let newCredit = Credit(amount: result.balance, frozen: result.frozen)
                     self.setCreditIfChanged(newCredit: newCredit)

@@ -58,7 +58,7 @@ public class NotificationManager: NSObject {
     public func didRegisterForRemoteNotificationsWithDeviceToken(_ deviceToken: Data) -> String {
         let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         _Concurrency.Task {
-            let result = try await GetSMS.shared.nw.registerPush(pushToken: token)
+            let result = try await DynamicNumberKit.shared.nw.registerPush(pushToken: token)
         }
         return token
     }

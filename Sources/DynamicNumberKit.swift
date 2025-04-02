@@ -1,8 +1,8 @@
 import Foundation
 import UserAcquisition
 
-public class GetSMS {
-    public static let shared = GetSMS()
+public class DynamicNumberKit {
+    public static let shared = DynamicNumberKit()
     public let nw = NetworkManager.shared
     public let appStoreManager = AppStoreConnectManager.shared
     
