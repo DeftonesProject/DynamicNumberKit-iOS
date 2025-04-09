@@ -8,6 +8,7 @@ public class DynamicNumberKit {
     
     public func configure(model: ConfigurationApp) {
         Constant.baseURL = model.baseURL
+        Constant.keychainVersion = model.keychainVersion
         AppStoreConnectManager.shared.loadProducts(productIdentifiers: model.productIdentifiers)
         AppStoreConnectManager.shared.purchaseLog = { product in
             UserAcquisition.shared.logPurchase(of: product)
@@ -25,11 +26,13 @@ public class DynamicNumberKit {
 }
 
 public struct ConfigurationApp {
+    var keychainVersion: String
     var baseURL: String
     var productIdentifiers: [String]
     var userAcquisitionModel: UserAcquisitionModel
 
     public init(
+        keychainVersion: String,
         baseURL: String,
         productIdentifiers: [String],
         userAcquisitionModel: UserAcquisitionModel
@@ -37,6 +40,7 @@ public struct ConfigurationApp {
         self.baseURL = baseURL
         self.productIdentifiers = productIdentifiers
         self.userAcquisitionModel = userAcquisitionModel
+        self.keychainVersion = keychainVersion
     }
 }
 
