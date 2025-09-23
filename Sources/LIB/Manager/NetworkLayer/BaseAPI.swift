@@ -16,7 +16,6 @@ public class BaseAPI<T: TargetType> {
         let method = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
         let headers = Alamofire.HTTPHeaders(target.headers ?? [:])
         let parameters = buildParams(task: target.task)
-
         do {
              let response = AF.request(
                 target.baseURL + target.path,

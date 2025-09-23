@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "GETSms",
+    name: "DynamicNumberKit",
     platforms: [
            .iOS(.v14),
        ],
     products: [
         .library(
-            name: "GETSms",
-            targets: ["GETSms"]),
+            name: "DynamicNumberKit",
+            targets: ["DynamicNumberKit"]),
     ],
 
     dependencies: [
@@ -22,7 +22,7 @@ let package = Package(
     
     targets: [
         .target(
-            name: "GETSms",
+            name: "DynamicNumberKit",
             dependencies: [
                 .product(name: "UserAcquisition", package: "UserAcquisition"),
                 .product(name: "Alamofire", package: "Alamofire"),

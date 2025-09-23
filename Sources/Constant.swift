@@ -12,12 +12,13 @@ public enum Constant {
     }
     
     static var baseURL: String = ""
+    static var keychainVersion: String = ""
     
     struct Key {
-        static let keychainName = "\(bundle).keychain.key.V1"
-        static let userToken = "\(bundle).keychain.user.token.key.V1"
-        static let userID = "\(bundle).keychain.user.id.key.V1"
-        static let deviceId = "\(bundle).keychain.device.id.key.V1"
+        static let keychainName = "\(bundle).keychain.key.\(keychainVersion)"
+        static let userToken = "\(bundle).keychain.user.token.key.\(keychainVersion)"
+        static let userID = "\(bundle).keychain.user.id.key.\(keychainVersion)"
+        static let deviceId = "\(bundle).keychain.device.id.key.\(keychainVersion)"
     }
     
     static var deviceId: String {

@@ -1,13 +1,14 @@
 import Foundation
 import UserAcquisition
 
-public class GetSMS {
-    public static let shared = GetSMS()
+public class DynamicNumberKit {
+    public static let shared = DynamicNumberKit()
     public let nw = NetworkManager.shared
     public let appStoreManager = AppStoreConnectManager.shared
     
     public func configure(model: ConfigurationApp) {
         Constant.baseURL = model.baseURL
+        Constant.keychainVersion = model.keychainVersion
         AppStoreConnectManager.shared.loadProducts(productIdentifiers: model.productIdentifiers)
         AppStoreConnectManager.shared.purchaseLog = { product in
             UserAcquisition.shared.logPurchase(of: product)
@@ -25,11 +26,13 @@ public class GetSMS {
 }
 
 public struct ConfigurationApp {
+    var keychainVersion: String
     var baseURL: String
     var productIdentifiers: [String]
     var userAcquisitionModel: UserAcquisitionModel
 
     public init(
+        keychainVersion: String,
         baseURL: String,
         productIdentifiers: [String],
         userAcquisitionModel: UserAcquisitionModel
@@ -37,6 +40,7 @@ public struct ConfigurationApp {
         self.baseURL = baseURL
         self.productIdentifiers = productIdentifiers
         self.userAcquisitionModel = userAcquisitionModel
+        self.keychainVersion = keychainVersion
     }
 }
 
