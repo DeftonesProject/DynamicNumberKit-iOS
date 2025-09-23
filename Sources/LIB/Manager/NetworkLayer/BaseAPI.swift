@@ -25,7 +25,6 @@ public class BaseAPI<T: TargetType> {
                 encoding: parameters.1,
                 headers: headers
              ).response { response in
-                 print( "MY LOG: ...." + String(data: response.data!, encoding: .utf8)!)
              }
             return try await response.serializingDecodable(M.self).value
         } catch let error as AFError {
