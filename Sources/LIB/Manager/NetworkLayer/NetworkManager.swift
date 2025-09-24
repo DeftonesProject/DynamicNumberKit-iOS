@@ -62,7 +62,7 @@ public class NetworkManager: BaseAPI<APIEndpoint>, APIProtocol {
         try await api.fetchData(target: APIEndpoint.deleteAccount, responseClass: EmptyResponse.self)
     }
     
-    public func returnNumber(internalID: Int) async throws -> EmptyResponse {
-        try await api.fetchData(target: APIEndpoint.returnNumber(internalID: internalID), responseClass: EmptyResponse.self)
+    public func returnNumber(internalID: Int) async throws -> ReturnNumberResponse {
+        try await api.fetchData(target: APIEndpoint.returnNumber(internalID: internalID), responseClass: ReturnNumberResponse.self)
     }
 }

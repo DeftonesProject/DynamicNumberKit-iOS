@@ -13,5 +13,5 @@ protocol APIProtocol {
     func registerPush(pushToken: String) async throws -> EmptyResponse
     func restorePurchase() async throws -> CreateAccountResponse
     func deleteAccount() async throws -> EmptyResponse
-    func returnNumber(internalID: Int) async throws -> EmptyResponse
+    func returnNumber(internalID: Int) async throws -> ReturnNumberResponse
 }

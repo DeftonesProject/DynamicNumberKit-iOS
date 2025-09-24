@@ -2,11 +2,14 @@ import Foundation
 
 public struct EmptyResponse: Decodable {
     public let message: String
-    let status: String?
+    
     enum CodingKeys: String, CodingKey {
         case message = "msg"
-        case status
     }
+}
+
+public struct ReturnNumberResponse: Decodable {
+    public let status: String
 }
 
 extension EmptyResponse: CustomStringConvertible {
