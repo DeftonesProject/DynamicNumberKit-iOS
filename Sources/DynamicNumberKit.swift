@@ -1,4 +1,5 @@
 import Foundation
+import StoreKit
 import UserAcquisition
 
 public class DynamicNumberKit {
@@ -16,6 +17,10 @@ public class DynamicNumberKit {
         if UserDataManager.isUserAuthorized {
             CreditManager.shared.fetchCreditFromServer()
         }
+    }
+    
+    public func sendPurchaseLog(buy product: SKProduct) -> Void {
+        UserAcquisition.shared.logPurchase(of: product)
     }
 
     private func configureUserAcquisition(model: UserAcquisitionModel) {
