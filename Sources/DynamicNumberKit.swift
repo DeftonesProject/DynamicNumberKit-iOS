@@ -17,12 +17,9 @@ public class DynamicNumberKit {
         if UserDataManager.isUserAuthorized {
             CreditManager.shared.fetchCreditFromServer()
         }
+        configureUserAcquisition(model: model.userAcquisitionModel)
     }
     
-    public func sendPurchaseLog(buy product: SKProduct) -> Void {
-        UserAcquisition.shared.logPurchase(of: product)
-    }
-
     private func configureUserAcquisition(model: UserAcquisitionModel) {
         UserAcquisition.shared.configure(withAPIKey: model.userAcquisitionAPIKey)
         UserAcquisition.shared.conversionInfo.amplitudeId = model.amplitudeID
